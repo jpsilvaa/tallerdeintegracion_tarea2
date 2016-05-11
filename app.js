@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/test', routes);
-app.use('/instagram', instagram);
+app.use('/instagram/:tag/buscar', instagram);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
