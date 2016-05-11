@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "expresso test/*"
+    "test": "./node_modules/expresso/bin/expresso test/*"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -13,7 +13,8 @@
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "expresso": "~2.3.0"
   }
   
 
