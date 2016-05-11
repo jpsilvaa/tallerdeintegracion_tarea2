@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    
+    var ig = require('instagram-node').instagram();
+    
+    
+  res.render('test', { title: 'Prueba' });
 });
 
 
