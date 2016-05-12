@@ -11,18 +11,3 @@ deploy:
     secure: aQF7+a6klNSlhDwYkt0aEutMcqXxy8fJSM021DFdqBDnomOJmNQ4UgsqUwNtNX0D2WCb+MAEx3GXUPZfa8pd70xB5Ox2B/cWJStCulCVFlFhSI5G2pqYdqFIRddbXkVhxchozcdniVHDwCUH5Ar/3P+JyiRo0bDHvLtX4oS7F1OvrtF2sBfuh27Pwcl3e+IImATNZuklwGWh3ci5mHTxzkWgKJsMrbYSdRmzoQFtpfoTw5L6bjoZ41eh+w2e1rBV81Fyrni//h08dfrIBB/OaIHcJHSqyNtpeQerOU52xNHapxBL83NCyOlTGAb3gawlsNuOETNJrSoDpRrlpldiFg7gLfLXfn4PCXvbsjIYQxaJer2O4PZl97zHI1YYGII0poNSg6Eg8eEDnhq9lc78y9T6kxnEsV8Hg65NGoecqwGQyHhunvA7Ouzap0Yk1Zi1uZ/J501kVe/JuPmC8fpMnYvfpZ/1MzWpFpHGybW6uhFeU2iNke/UDh4a+MWUom3AOWUzx4xqsncI9FpBn3SasesvkgAqXUDr03kUhdfwhriB8zAX7XyZoDtkWqX6+7tY7qC+OTv/6AoyQ6c9rx7VeKv0LEWT2eDtVNZ1qSw1Pdee4aR/yyUinVTGe92ndbbdl+XJgFMgudN68DRH5gkNUKM87nlxaDK0oP5PIjMc1yg=
   on: master
   app: tallerdeintegraciontarea2
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "DGxYFurmxvXLh3y4M2HNmaDiZISEbKJxkks5zzU0nVUxcptIPJhhMqD5fI+4LrPkUwpV54xHY6gSvfnHktZRBChrVM4eM7dH9GTC10QPVvRxiwuL+xzO5ZIkoGRyg3rE7F5wTzZINJjkNLeqshe9/M+mwVuelkfyqupzRbytAiEx2ukrJ5aUZjUyFuEmXSTY92nEH3opcLvG7ksDry+ZAhMrTermIYpJuDt6E2ua+j9tKht1jpbVfp6JtgI+UtE4OEzE4i3V2NI/p4CCS7hT6jBIv/ZqTRskq3oT1/uni+x307CLXa6A5ioKE/ishef1wl7ZTotY+Q80H7L5UD0pjN3x+WdKqoc1OJxcTEljy48wPhkVWjhxGUvAKW8RDwCCh1nk3klls6/m30SG/AWXWT8ln29FlDiKwJMR2DB/3+90ZtYIo3iNZqtR/nj09aLLphr15nSKyY+oj5rssQmlKdCBW6inrUNjyMl/gKjbYLrRr/xpl1/o22SyPaATiNHbavFImcCYJtf67H533waMGqan/2x8musQvEHwUqP/oQAGeF7ajRE6bIMrDuqakRbzAAVPdKVz2eYDeo+svgJSPWWrGMmbsHE7z1HLrSURNL8itX34RJr9UT80PkWgMmUyhl8eG2jP3qk7uKjabxVcYJKZKi2kbYMoI5WUVKlWkA0="
-
-addons:
-  coverity_scan:
-    project:
-      name: "jpsilvaa/tallerdeintegracion_tarea2"
-      description: "Build submitted via Travis CI"
-    notification_email: jpsilvaa@gmail.com
-    build_command_prepend: ""
-    build_command:   ""
-    branch_pattern: coverity_scan

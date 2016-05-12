@@ -1,10 +1,10 @@
 {
   "name": "tarea2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "expresso test/*"
+    "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -14,10 +14,19 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "expresso": "~0.9.2",
     "instagram-node": "~0.5.8"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9"
+    "chai": "~3.5.0",
+    "coveralls": "^2.11.9",
+    "jscoverage": "^0.6.0",
+    "mocha": "~2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
+    "supertest": "^1.2.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "test/*"
+    }
   }
 }
