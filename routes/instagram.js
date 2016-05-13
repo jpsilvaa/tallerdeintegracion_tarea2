@@ -1,16 +1,14 @@
 var express = require('express');
 var router = express.Router();
-
+var Insta = require('../models/instagram.js');
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    var ig = require('instagram-node').instagram();
-
-    ig.use({ access_token: '3231014232.1677ed0.7c68b172e604438cb5e385d8fad65b5d' });
+router.get('/:tag/buscar', function(req, res, next) {
     
-    //var ans = ig.tag(tag, function(err, result, remaining, limit) {    
-    //});
-    
-    res.write("ejemplo");
+    var insta = new Insta();
+    insta.getFormatedMediaOfTag(req.params.tag,function(err, data){
+        res.write(JSON.stringify(data));
+        res.end();
+    });
 });
 
 
