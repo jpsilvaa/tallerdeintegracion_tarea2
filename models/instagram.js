@@ -61,7 +61,7 @@ method.getFormatedMediaOfTag = function(tag,callback) {
             array.push(final);
         };  
           
-        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.9" }
+        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.10" }
         callback(err,end);        
       });      
   });  
