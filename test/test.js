@@ -2,8 +2,7 @@ var assert = require('chai').assert;
 var app = require('../app');
 var request = require('supertest');
 var http = require('http');
-var server = require('../lib/server.js');
-var Response = require("../node_modules/express/lib/response.js");
+
 describe('instagram', function() {
   it('Prueba la clase instagram', function(done){
     var Insta = require('../models/instagram.js');
@@ -42,5 +41,29 @@ describe('instagram', function() {
         done();        
       });
   });
+  it('Se obtiene la mayor resolucion', function (done) {
+      this.timeout(5000);
 
+      var Insta = require('../models/instagram.js');
+      var ex = new Insta();
+      var t = ex.getBigestResolution({
+            "low_resolution": {
+                "url": "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13166783_242158072841933_235274681_n.jpg?ig_cache_key=MTI0OTUzNjk3NzgwMzQ0NTIyMQ%3D%3D.2",
+                "width": 320,
+                "height": 320
+            },
+            "thumbnail": {
+                "url": "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/13166783_242158072841933_235274681_n.jpg?ig_cache_key=MTI0OTUzNjk3NzgwMzQ0NTIyMQ%3D%3D.2",
+                "width": 150,
+                "height": 150
+            },
+            "standard_resolution": {
+                "url": "https://scontent.cdninstagram.com/t51.2885-15/e35/13166783_242158072841933_235274681_n.jpg?ig_cache_key=MTI0OTUzNjk3NzgwMzQ0NTIyMQ%3D%3D.2",
+                "width": 640,
+                "height": 640
+            }
+        });
+      assert(t == "https://scontent.cdninstagram.com/t51.2885-15/e35/13166783_242158072841933_235274681_n.jpg?ig_cache_key=MTI0OTUzNjk3NzgwMzQ0NTIyMQ%3D%3D.2" , "La foto no es la maxima");
+      done();        
+  });
 });

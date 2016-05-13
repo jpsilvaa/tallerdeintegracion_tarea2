@@ -1,6 +1,6 @@
 {
   "name": "tarea2",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "chai": "~3.5.0",
     "coveralls": "^2.11.9",
+    "jscover": "^1.0.0",
     "jscoverage": "^0.6.0",
     "mocha": "~2.4.5",
     "mocha-lcov-reporter": "^1.2.0",
