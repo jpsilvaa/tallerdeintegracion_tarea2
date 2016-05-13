@@ -7,11 +7,10 @@ router.get('/', function(req, res, next) {
 
     ig.use({ access_token: '3231014232.1677ed0.7c68b172e604438cb5e385d8fad65b5d' });
     
-    var ans = ig.tag(tag, function(err, result, remaining, limit) {    
-        console.log(result);
-        res.send("ejemplo");
-        res.end();
-    });
+    //var ans = ig.tag(tag, function(err, result, remaining, limit) {    
+    //});
+    
+    res.write("ejemplo");
 });
 
 
