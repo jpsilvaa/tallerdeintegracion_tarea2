@@ -62,12 +62,15 @@ method.getFormatedMediaOfTag = function(tag,callback) {
             if(media["caption"] != null && media["caption"]["text"]!= null) {
                 texto = media["caption"]["text"];
             }
+            if (media["tags"][0] == null) {
+                continue;
+            }
             
             var final = {tags: media["tags"], username: media["user"]["username"], likes: media["likes"]["count"], url: url , caption: texto};
             array.push(final);
         };  
           
-        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.11" }
+        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.12" }
         callback(err,end);        
       });      
   });  
