@@ -29,7 +29,7 @@ describe('instagram', function() {
         done();        
       });
   });
-  it('Se realiza el formato final', function (done) {
+  it('El formato contiene el total, la version y los posts', function (done) {
       this.timeout(5000);
 
       var Insta = require('../models/instagram.js');
@@ -37,7 +37,7 @@ describe('instagram', function() {
       var t = ex.getFormatedMediaOfTag("tag",function(err,data) {
         assert(data["metadata"]["total"] != null , "No tiene el contador");
         assert(data["version"] != null , "No tiene la version");
-        assert(data["posts"] != null , "No tiene el contador");
+        assert(data["posts"] != null , "No tiene posts");
         done();        
       });
   });

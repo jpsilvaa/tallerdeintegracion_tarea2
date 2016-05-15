@@ -57,11 +57,17 @@ method.getFormatedMediaOfTag = function(tag,callback) {
             else { 
                 url = method.getBigestResolution(media["videos"]);
             }
-            var final = {tags: media["tags"], username: media["user"]["username"], likes: media["likes"]["count"], url: url , caption: media["caption"]["text"]};
+            var texto = "";
+            
+            if(media["caption"] != null && media["caption"]["text"]!= null) {
+                texto = media["caption"]["text"];
+            }
+            
+            var final = {tags: media["tags"], username: media["user"]["username"], likes: media["likes"]["count"], url: url , caption: texto};
             array.push(final);
         };  
           
-        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.10" }
+        end = {metadata: {total: data1["media_count"]}, posts: array, version: "1.0.11" }
         callback(err,end);        
       });      
   });  
